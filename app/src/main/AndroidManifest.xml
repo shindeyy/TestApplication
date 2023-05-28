@@ -3,22 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- Required only if your app needs to access images or photos
-     that other apps created. -->
+    <!--
+ Required only if your app needs to access images or photos
+     that other apps created.
+    -->
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-
-    <!-- Required only if your app needs to access videos
-         that other apps created. -->
+    <!--
+ Required only if your app needs to access videos
+         that other apps created.
+    -->
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
-
-    <!-- Required only if your app needs to access audio files
-         that other apps created. -->
+    <!--
+ Required only if your app needs to access audio files
+         that other apps created.
+    -->
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="29" />
 
     <application
@@ -32,24 +36,9 @@
         android:theme="@style/Theme.TestApplication"
         tools:targetApi="31">
         <activity
-            android:name=".VisibilityActivity"
+            android:name=".MediaPickerActivity"
             android:exported="true"
-            android:label="@string/title_activity_visibility"
-            android:theme="@style/Theme.TestApplication" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true"
-            android:label="@string/title_activity_login"
-            android:theme="@style/Theme.TestApplication"></activity>
-        <activity
-            android:name=".TextFieldActivity"
-            android:exported="true"
-            android:label="@string/title_activity_text_field"
-            android:theme="@style/Theme.TestApplication"></activity>
-        <activity
-            android:name=".TestActivity"
-            android:exported="true"
-            android:label="@string/title_activity_test"
+            android:label="@string/title_activity_for_result"
             android:theme="@style/Theme.TestApplication">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,10 +47,30 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".VisibilityActivity"
+            android:exported="true"
+            android:label="@string/title_activity_visibility"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".TextFieldActivity"
+            android:exported="true"
+            android:label="@string/title_activity_text_field"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".TestActivity"
+            android:exported="true"
+            android:label="@string/title_activity_test"
+            android:theme="@style/Theme.TestApplication"></activity>
+        <activity
             android:name=".BottomBarActivity"
             android:exported="true"
             android:label="@string/title_activity_bottom_bar"
-            android:theme="@style/Theme.TestApplication" >
+            android:theme="@style/Theme.TestApplication">
         </activity>
         <activity
             android:name=".ImageLoadingActivity"
@@ -82,7 +91,7 @@
             android:name=".HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_home"
-            android:theme="@style/Theme.TestApplication" />
+            android:theme="@style/Theme.TestApplication"></activity>
         <activity
             android:name=".TabViewActivity"
             android:exported="true"
@@ -150,8 +159,13 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TestApplication" />
+            android:theme="@style/Theme.TestApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
