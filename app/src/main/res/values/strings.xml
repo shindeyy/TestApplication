@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">TestApplication</string>
+    <string name="title_activity_state_example">StateExampleActivity</string>
+    <string name="title_activity_edit_text_button_snack_bar">EditTextButtonSnackBarActivity</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="title_activity_bottom_sheet">BottomSheetActivity</string>
+    <string name="title_activity_constraint_layout">ConstraintLayoutActivity</string>
+    <string name="title_activity_animation">AnimationActivity</string>
+    <string name="title_activity_progress_bar">ProgressBarActivity</string>
+    <string name="title_activity_coavas">CoavasActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_expanded_view">ExpandedViewActivity</string>
+    <string name="title_activity_header_recycler_view">HeaderRecyclerView</string>
+    <string name="title_activity_tab_view">TabViewActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_nested_scroll">NestedScrollActivity</string>
+    <string name="title_activity_dragable_view">DragableViewActivity</string>
+    <string name="title_activity_image_loading">ImageLoadingActivity</string>
+    <string name="title_activity_bottom_bar">BottomBarActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_text_field">TextFieldActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_visibility">VisibilityActivity</string>
+</resources>

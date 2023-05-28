@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Required only if your app needs to access images or photos
+     that other apps created. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <!-- Required only if your app needs to access videos
+         that other apps created. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <!-- Required only if your app needs to access audio files
+         that other apps created. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TestApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".VisibilityActivity"
+            android:exported="true"
+            android:label="@string/title_activity_visibility"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.TestApplication"></activity>
+        <activity
+            android:name=".TextFieldActivity"
+            android:exported="true"
+            android:label="@string/title_activity_text_field"
+            android:theme="@style/Theme.TestApplication"></activity>
+        <activity
+            android:name=".TestActivity"
+            android:exported="true"
+            android:label="@string/title_activity_test"
+            android:theme="@style/Theme.TestApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BottomBarActivity"
+            android:exported="true"
+            android:label="@string/title_activity_bottom_bar"
+            android:theme="@style/Theme.TestApplication" >
+        </activity>
+        <activity
+            android:name=".ImageLoadingActivity"
+            android:exported="true"
+            android:label="@string/title_activity_image_loading"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".DragableViewActivity"
+            android:exported="true"
+            android:label="@string/title_activity_dragable_view"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".NestedScrollActivity"
+            android:exported="true"
+            android:label="@string/title_activity_nested_scroll"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".TabViewActivity"
+            android:exported="true"
+            android:label="@string/title_activity_tab_view"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".HeaderRecyclerView"
+            android:exported="true"
+            android:label="@string/title_activity_header_recycler_view"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".ExpandedViewActivity"
+            android:exported="true"
+            android:label="@string/title_activity_expanded_view"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="true"
+            android:label="@string/title_activity_search"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".CanvasActivity"
+            android:exported="true"
+            android:label="@string/title_activity_coavas"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".ProgressBarActivity"
+            android:exported="true"
+            android:label="@string/title_activity_progress_bar"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".AnimationActivity"
+            android:exported="true"
+            android:label="@string/title_activity_animation"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".ConstraintLayoutActivity"
+            android:exported="true"
+            android:label="@string/title_activity_constraint_layout"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".BottomSheetActivity"
+            android:exported="true"
+            android:label="@string/title_activity_bottom_sheet"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".ListActivity"
+            android:exported="true"
+            android:label="@string/title_activity_list"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".EditTextButtonSnackBarActivity"
+            android:exported="true"
+            android:label="@string/title_activity_edit_text_button_snack_bar"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".StateExampleActivity"
+            android:exported="true"
+            android:label="@string/title_activity_state_example"
+            android:theme="@style/Theme.TestApplication" />
+        <activity
+            android:name=".TextStyleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.TestApplication" />
+
+    </application>
+
+</manifest>
