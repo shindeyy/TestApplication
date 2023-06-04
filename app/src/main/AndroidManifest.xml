@@ -36,15 +36,21 @@
         android:theme="@style/Theme.TestApplication"
         tools:targetApi="31">
         <activity
-            android:name=".MediaPickerActivity"
+            android:name=".DateTimeActivity"
             android:exported="true"
-            android:label="@string/title_activity_for_result"
-            android:theme="@style/Theme.TestApplication">
+            android:label="@string/title_activity_date_time"
+            android:theme="@style/Theme.TestApplication" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MediaPickerActivity"
+            android:exported="true"
+            android:label="@string/title_activity_for_result"
+            android:theme="@style/Theme.TestApplication">
         </activity>
         <activity
             android:name=".VisibilityActivity"
@@ -65,13 +71,12 @@
             android:name=".TestActivity"
             android:exported="true"
             android:label="@string/title_activity_test"
-            android:theme="@style/Theme.TestApplication"></activity>
+            android:theme="@style/Theme.TestApplication" />
         <activity
             android:name=".BottomBarActivity"
             android:exported="true"
             android:label="@string/title_activity_bottom_bar"
-            android:theme="@style/Theme.TestApplication">
-        </activity>
+            android:theme="@style/Theme.TestApplication"></activity>
         <activity
             android:name=".ImageLoadingActivity"
             android:exported="true"
@@ -91,7 +96,7 @@
             android:name=".HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_home"
-            android:theme="@style/Theme.TestApplication"></activity>
+            android:theme="@style/Theme.TestApplication" />
         <activity
             android:name=".TabViewActivity"
             android:exported="true"
