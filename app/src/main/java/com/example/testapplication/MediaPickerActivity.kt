@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
@@ -134,8 +135,8 @@ fun PickMultipleImage(){
 
 @Composable
 fun PickVideo(){
-    val result = remember { mutableStateOf<Uri?>(null) }
-    val launcher = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) {
+    val result = remember { mutableStateOf<List<Uri?>?>(null) }
+    val launcher = rememberLauncherForActivityResult(ActivityResultContracts.PickMultipleVisualMedia(2)) {
         result.value = it
     }
 
@@ -148,8 +149,12 @@ fun PickVideo(){
             Text(text = "Select Video")
         }
 
-        result.value?.let { image ->
-            Text(text = "Video Path: "+image.path.toString())
+        result.value?.let { videos ->
+            LazyColumn(contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp)) {
+                items(videos){ video->
+                    Text(text = "Video Path: "+ video?.path)
+                }
+            }
         }
     }
 }

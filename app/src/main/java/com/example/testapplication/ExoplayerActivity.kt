@@ -26,7 +26,9 @@ import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.datasource.DataSource
 import androidx.media3.datasource.DefaultDataSource
+import androidx.media3.exoplayer.DefaultRenderersFactory
 import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.mediacodec.MediaCodecRenderer
 import androidx.media3.exoplayer.source.ProgressiveMediaSource
 import androidx.media3.ui.AspectRatioFrameLayout
 import androidx.media3.ui.PlayerView
@@ -50,50 +52,21 @@ class ExoplayerActivity : ComponentActivity() {
     }
 }
 
-/*@Composable
-fun VideoPlayer(modifier: Modifier = Modifier) {
-
-    val context = LocalContext.current
-
-    val exoPlayer = remember {
-        ExoPlayer.Builder(context).build().apply {
-            setMediaItem(
-                MediaItem.fromUri(
-                    "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
-                )
-            )
-            prepare()
-            playWhenReady = true
-        }
-    }
-
-    Box(modifier = modifier) {
-        DisposableEffect(key1 = Unit) { onDispose { exoPlayer.release() } }
-
-        AndroidView(
-            factory = {
-                StyledPlayerView(context).apply {
-                    player = exoPlayer
-                    layoutParams =
-                        FrameLayout.LayoutParams(
-                            ViewGroup.LayoutParams.MATCH_PARENT,
-                            ViewGroup.LayoutParams.MATCH_PARENT
-                        )
-                }
-            }
-        )
-    }
-}*/
-
 @Composable
 @androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
 fun VideoPlayer() {
     val context = LocalContext.current
 
-    val uri = Uri.parse("https://www.exit109.com/~dnn/clips/RW20seconds_2.mp4")
-    val uri1 = Uri.parse("https://www.exit109.com/~dnn/clips/RW20seconds_1.mp4")
+    val uri1 = Uri.parse("https://stage-s3cdn.fittr.com/videos/16974_FT_dac156ac-8a09-44f5-bb45-1f9f5a98ec0f.mp4")
+    val uri = Uri.parse("https://stage-s3cdn.fittr.com/videos/89FACC2B-F8CB-459B-A1D0-B9D527971748.mov")
+
+    val rendererFactory = DefaultRenderersFactory(context).apply {
+        setExtensionRendererMode(DefaultRenderersFactory.EXTENSION_RENDERER_MODE_ON)
+    }
+
     val exoPlayer = remember {
         ExoPlayer.Builder(context)
+            .setRenderersFactory(rendererFactory)
             .build()
             .apply {
                 val defaultDataSourceFactory = DefaultDataSource.Factory(context)
@@ -111,7 +84,6 @@ fun VideoPlayer() {
                 repeatMode = Player.REPEAT_MODE_ALL
             }
     }
-
     DisposableEffect(
         Column(
             modifier = Modifier
@@ -138,8 +110,6 @@ fun VideoPlayer() {
 @Composable
 fun GreetingPreview17() {
     TestApplicationTheme {
-        val uri =
-            Uri.parse("https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4")
         VideoPlayer()
     }
 }
