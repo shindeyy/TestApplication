@@ -58,10 +58,6 @@
             android:exported="true"
             android:label="@string/title_activity_for_result"
             android:theme="@style/Theme.TestApplication" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".VisibilityActivity"
@@ -72,7 +68,12 @@
             android:name=".LoginActivity"
             android:exported="true"
             android:label="@string/title_activity_login"
-            android:theme="@style/Theme.TestApplication" />
+            android:theme="@style/Theme.TestApplication" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".TextFieldActivity"
             android:exported="true"

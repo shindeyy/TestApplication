@@ -1,5 +1,6 @@
 package com.example.testapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -35,6 +36,8 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat.startActivity
+import androidx.test.core.app.launchActivity
 import com.example.testapplication.ui.theme.TestApplicationTheme
 
 class LoginActivity : ComponentActivity() {
@@ -117,7 +120,8 @@ fun LoginScreen() {
 
         OutlinedButton(
             onClick = {
-                Toast.makeText(context, "On login click", Toast.LENGTH_SHORT).show()
+                val intent = Intent(context, BottomBarActivity::class.java)
+                context.startActivity(intent)
             },
             enabled = isLoginEnabled,
             colors = ButtonDefaults.buttonColors(
